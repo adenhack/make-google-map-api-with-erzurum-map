@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERZURUM VALİLİĞİ MAP PROJESİ</title>
+    <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css'>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./ilceler_xml/Askale_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Aziziye_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Cat_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Senkaya_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Olur_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Oltu_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Uzundere_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/pazaryolu_mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/İspir_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Tortum_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Narman_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Horasan_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Pasinler_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Yakutiye_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Tekman_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Köprüköy_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Hınıs_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Karayazı_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Palandöken_Mahalle.xml">
+    <link rel="stylesheet" href="./ilceler_xml/Karaçoban_Mahalle.xml">
+</head>
+
+<body>
+
+    <div class="üst">
+        <!-- banner tarafı boş bırakıldı -->
+    </div>
+
+    <div class="container">
+        <div class="solekran">
+
+            <div class="bosluk">
+
+            </div>
+
+            <div class="banner">
+               <a href="http://www.erzurum.gov.tr" target="_blank"> <img src="resimler/erzurumvaliligilogo.png" alt="banner"></a>
+            </div>
+
+            <div class="ikinci">
+                <form action="" class="ilceler">
+                    <select name="color" id="ilceler" class="form-control">
+                        <option value="erzurum" selected disabled hidden>İlçeler</option>
+                        <option value="askale">AŞKALE</option>
+                        <option value="aziziye">AZİZİYE</option>
+                        <option value="cat">ÇAT</option>
+                        <option value="senkaya">ŞENKAYA</option>
+                        <option value="olur">OLUR</option>
+                        <option value="oltu">OLTU</option>
+                        <option value="uzundere">UZUNDERE</option>
+                        <option value="pazaryolu">PAZARYOLU</option>
+                        <option value="ispir">İSPİR</option>
+                        <option value="tortum">TORTUM</option>
+                        <option value="narman">NARMAN</option>
+                        <option value="horasan">HORASAN</option>
+                        <option value="pasinler">PASİNLER</option>
+                        <option value="yakutiye">YAKUTİYE</option>
+                        <option value="tekman">TEKMAN</option>
+                        <option value="köprüköy">KÖPRÜKÖY</option>
+                        <option value="hınıs">HINIS</option>
+                        <option value="karayazi">KARAYAZI</option>
+                        <option value="palandöken">PALANDÖKEN</option>
+                        <option value="karacoban">KARAÇOBAN</option>
+                        <!-- veriler script.js ilceler.innerHTML'den çekildi -->
+                    </select>
+
+                    <div class="mahalleler">
+                        <select name="color" id="mahalleler" class="form-control" disabled>
+                            <option value="" selected disabled hidden>Mahalleler</option>
+                            <!-- askale verileri script.js mahalleler.innerHTML'den çekildi -->
+                        </select>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="altbosluk">
+                <button id="gizle">GİZLE</button>
+                <button id="göster">GÖSTER</button>
+            </div>
+
+            <div class="bilgiişlemyazısı">
+                <h4>Bilgi İşlem Şube Müdürlüğü</h4>
+            </div>
+        </div>
+
+
+        <div class="ilk">
+            <div id="map">
+                <!-- <img src="./resimler/erzurumvaliligilogo.png" class="gm-style" alt="Erzurum Valiliği"> -->
+
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiznR2Lp-Xo4WjAB3kKiDqyJxutHpdpyU&callback=askale&v=weekly"
+        defer></script>
+    <script src="./koordinatlar/karacoban_koordinatlar.js"></script>
+    <script src="./koordinatlar/palandoken_koordinatlar.js"></script>
+    <script src="./koordinatlar/karayazı_koordinatlar.js"></script>
+    <script src="./koordinatlar/hınıs_koordinatlar.js"></script>
+    <script src="./koordinatlar/köprüköy_koordinatlar.js"></script>
+    <script src="./koordinatlar/tekman_koordinatlar.js"></script>
+    <script src="./koordinatlar/yakutiye_koordinatlar.js"></script>
+    <script src="./koordinatlar/pasinler_koordinatlar.js"></script>
+    <script src="./koordinatlar/horasan_koordinatlar.js"></script>
+    <script src="./koordinatlar/narman_koordinatlar.js"></script>
+    <script src="./koordinatlar/tortum_koordinatlar.js"></script>
+    <script src="./koordinatlar/ispir_koordinatlar.js"></script>
+    <script src="./koordinatlar/pazaryolu_koordinatlar.js"></script>
+    <script src="./koordinatlar/uzundere_koordinatlar.js"></script>
+    <script src="./koordinatlar/oltu_koordinatlar.js"></script>
+    <script src="./koordinatlar/olur_koordinatlar.js"></script>
+    <script src="./koordinatlar/senkaya_koordinatlar.js"></script>
+    <script src="./koordinatlar/cat_koordinatlar.js"></script>
+    <script src="./koordinatlar/aziziye_koordinatlar.js"></script>
+    <script src="./koordinatlar/askale_koordinatlar.js"></script>
+    <script src="./koordinatlar/ilce_koordinatlar.js"></script>
+    <script src="./ilceler_js/karacoban.js"></script>
+    <script src="./ilceler_js/palandöken.js"></script>
+    <script src="./ilceler_js/karayazı.js"></script>
+    <script src="./ilceler_js/hınıs.js"></script>
+    <script src="./ilceler_js/köprüköy.js"></script>
+    <script src="./ilceler_js/tekman.js"></script>
+    <script src="./ilceler_js/yakutiye.js"></script>
+    <script src="./ilceler_js/pasinler.js"></script>
+    <script src="./ilceler_js/horasan.js"></script>
+    <script src="./ilceler_js/narman.js"></script>
+    <script src="./ilceler_js/tortum.js"></script>
+    <script src="./ilceler_js/ispir.js"></script>
+    <script src="./ilceler_js/pazaryolu.js"></script>
+    <script src="./ilceler_js/uzundere.js"></script>
+    <script src="./ilceler_js/oltu.js"></script>
+    <script src="./ilceler_js/olur.js"></script>
+    <script src="./ilceler_js/senkaya.js"></script>
+    <script src="./ilceler_js/cat.js"></script>
+    <script src="./ilceler_js/aziziye.js"></script>
+    <script src="./ilceler_js/askale.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
